@@ -1,21 +1,20 @@
-import Express from "express"
+import './env-config'
+// @ts-ignore
+import express from "express"
+// @ts-ignore
 import process from "process"
-import dotenv from "dotenv"
 
 import api from './api'
 import * as path from "path";
 
-// load env variables
-dotenv.config()
-
 // create express app
-const app = Express()
+const app = express()
 
 // handle api request
 app.use("/api", api)
 
 // serve static files
-app.use(Express.static("build"))
+app.use(express.static("build"))
 
 // server react app with route
 app.get("*", (req, res) => {

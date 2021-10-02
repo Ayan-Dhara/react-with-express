@@ -4,15 +4,6 @@ import Home from "./Home";
 import Demo from "./Demo";
 
 const App = () => {
-  const [data, setData] = useState("")
-  useEffect(() => {
-    fetch("/api/demo")
-      .then(res => res.json())
-      .then(json => {
-        if (json.data)
-          setData(json.data)
-      })
-  }, [])
   return (
     <Router>
       <Switch>

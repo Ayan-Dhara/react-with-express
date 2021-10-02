@@ -1,4 +1,4 @@
-import express from "express"
+import * as express from "express"
 import demoRouter from './demo'
 
 const router = express.Router()
