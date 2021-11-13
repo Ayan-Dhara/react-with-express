@@ -1,0 +1,10 @@
+# server - for express app
+SERVER_PORT=4000
+SERVER_PROTOCOL=http
+SERVER_HOST=localhost
+TS_NODE_PROJECT=tsconfig.server.json
+
+# client - for react app
+PORT=3000
+BROWSER=none
+GENERATE_SOURCEMAP=false

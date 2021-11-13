@@ -1,0 +1,7 @@
+ts template - done
+js template
+react routing - done
+ssr
+vite
+telwind (vite / craco)
+
