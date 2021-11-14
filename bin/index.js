@@ -41,7 +41,7 @@ if (!projectFolder) {
   const currentLocation = path.resolve().toString().split('/')
   const currentFolder = currentLocation[currentLocation.length - 1]
   if (/^([a-zA-Z_][a-zA-Z0-9-_]*[a-zA-Z0-9_])$/.test(currentFolder))
-    createProject(path.join(...currentLocation), currentFolder)
+    createProject(path.resolve(), currentFolder)
   else
     console.log("cannot create project with name", currentFolder)
 } else if (!/^([a-zA-Z_][a-zA-Z0-9-_]*[a-zA-Z0-9_])$/.test(projectFolder)) {
