@@ -12,7 +12,8 @@
     "build:server": "tsc -p tsconfig.server.json",
     "build:client": "react-scripts build",
     "build": "npm run build:client && npm run build:server",
-    "start": "node index.js"
+    "start": "node index.js",
+    "compile": "tsc test.ts"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

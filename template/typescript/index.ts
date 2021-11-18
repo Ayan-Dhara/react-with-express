@@ -7,6 +7,8 @@ import process from "process"
 import api from './api'
 import * as path from "path";
 
+const SERVER_PORT = process.env.SERVER_PORT || process.env.PORT || 4000
+
 // create express app
 const app = express()
 
@@ -27,6 +29,6 @@ app.use("/", (req, res) => {
 })
 
 // start server
-app.listen(process.env.SERVER_PORT || 5000, () => {
+app.listen(SERVER_PORT || 5000, () => {
   console.log("Server started")
 })

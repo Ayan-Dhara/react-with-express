@@ -3,6 +3,9 @@ import express from "express"
 import api from './api/index.mjs'
 import * as path from "path";
 import * as fs from "fs";
+import process from "process";
+
+const SERVER_PORT = process.env.SERVER_PORT || process.env.PORT || 4000
 
 // create express app
 const app = express()
@@ -29,6 +32,6 @@ app.use("/", (req, res) => {
 })
 
 // start server
-app.listen(process.env.SERVER_PORT || 5000, () => {
+app.listen(SERVER_PORT || 5000, () => {
   console.log("Server started")
 })
