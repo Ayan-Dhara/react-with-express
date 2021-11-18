@@ -12,12 +12,13 @@
     "build:server": "tsc -p tsconfig.server.json",
     "build:client": "react-scripts build",
     "build": "npm run build:client && npm run build:server",
-    "start": "node index.js",
-    "compile": "tsc test.ts"
+    "start": "node index.js"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
     "@types/jest": "^26.0.15",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
@@ -28,9 +29,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
-    "typescript": "^4.4.4"
-  },
-  "devDependencies": {
+    "typescript": "^4.4.4",
     "ts-node": "^10.2.1",
     "concurrently": "^6.3.0",
     "http-proxy-middleware": "^2.0.1",
