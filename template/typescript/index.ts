@@ -1,7 +1,5 @@
 import './env-config'
-// @ts-ignore
 import express from "express"
-// @ts-ignore
 import process from "process"
 
 import api from './api'
