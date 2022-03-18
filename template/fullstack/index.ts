@@ -1,9 +1,8 @@
-import './env-config'
+import './configure'
 import express from "express"
-import process from "process"
-
 import api from './api'
 import * as path from "path";
+import * as FS from "fs";
 
 const SERVER_PORT = process.env.SERVER_PORT || process.env.PORT || 4000
 
@@ -17,8 +16,13 @@ app.use("/api", api)
 app.use(express.static("build"))
 
 // server react app with route
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build/index.html"))
+app.get("*", (req, res, next) => {
+  const indexFile = path.resolve("build", "index.html")
+  if (FS.existsSync(indexFile)) {
+    res.sendFile(indexFile)
+  } else {
+    next()
+  }
 })
 
 // handle with 404 error if route is not handled

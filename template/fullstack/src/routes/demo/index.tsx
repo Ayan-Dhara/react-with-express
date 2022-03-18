@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-const Demo = () => {
+const Index = () => {
   const [data, setData] = useState("")
+
   useEffect(() => {
     fetch("/api/demo")
       .then(res => res.json())
@@ -10,6 +11,7 @@ const Demo = () => {
           setData(json.data)
       })
   }, [])
+
   return (
     <>
       data: {data}
@@ -17,4 +19,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Index;

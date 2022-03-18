@@ -3,13 +3,13 @@ const fs = require("fs");
 const os = require("os");
 const copyFilesWisely = require("./copyFilesWisely");
 
-const createJSProject = (projectFolder, projectName) => {
-  console.log("Creating project files...\n", projectFolder);
+const createProject = (projectFolder, projectName) => {
+  console.log("Creating project files...\n");
   if (!fs.existsSync(projectFolder)) {
     fs.mkdirSync(projectFolder);
     console.log(`created ${projectFolder}`);
   }
-  copyFilesWisely(path.join(__dirname, '..', `template/javascript`), `${projectFolder}`)
+  copyFilesWisely(path.join(__dirname, '..', `template/fullstack`), `${projectFolder}`)
 
   // edit package.json
   if(fs.existsSync(`${projectFolder}/package.json`)){
@@ -21,4 +21,4 @@ const createJSProject = (projectFolder, projectName) => {
   require('./complitionMessage')(projectName)
 }
 
-module.exports = createJSProject;
+module.exports = createProject;

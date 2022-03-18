@@ -2,32 +2,9 @@
 
 const path = require('path')
 const fs = require("fs");
+const createProject = require("./createProject");
 
 const projectFolder = process.argv[2]
-
-const createProject = (folder, project) => {
-  const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
-  console.log('Choose your project script:')
-  console.log('1. Typescript (default)')
-  console.log('2. Javascript')
-  readline.question('enter choice: ', script => {
-    readline.close()
-    if (script === '1') {
-      require('./createTS')(folder, project)
-    } else if (script === '2') {
-      require('./createJS')(folder, project)
-    } else if (script === '') {
-      require('./createTS')(folder, project)
-    } else {
-      console.log('Invalid choice')
-      createProject(folder, project)
-    }
-  });
-}
 
 if (!projectFolder) {
   console.log("Specify a project name...")

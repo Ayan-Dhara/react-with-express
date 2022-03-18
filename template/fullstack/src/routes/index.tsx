@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-const Home = () => {
+const Index = () => {
   return (
     <>
       Home Page <br/>
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Index;
