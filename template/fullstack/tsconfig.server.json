@@ -5,6 +5,7 @@
     "target": "es6",
     "noImplicitAny": true,
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "paths": {
