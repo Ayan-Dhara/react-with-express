@@ -17,7 +17,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "paths": {
+      "@root/*": [
+        "/*"
+      ],
+      "@api/*": [
+        "./api/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src"
