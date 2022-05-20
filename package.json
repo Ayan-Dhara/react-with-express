@@ -1,6 +1,6 @@
 {
   "name": "react-with-express",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "React with Express template on typescript",
   "main": "index.js",
   "bin": "./bin/index.js",
